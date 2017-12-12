@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8US-9m-F2y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yuy-ml-8JV">
+            <objects>
+                <viewController id="B8z-x7-TEc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1a5-Md-pen">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7ZK-eV-AHs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wHa-GM-D1U"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bx4-5Q-XD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="97"/>
+        </scene>
+        <!--排行-->
+        <scene sceneID="r5D-qd-LBj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8US-9m-F2y" customClass="XWTNavigationController" customModule="LiveTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="排行" image="ranking-n" selectedImage="ranking-p" id="8Ht-L3-Pqi"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="13l-Be-qs2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B8z-x7-TEc" kind="relationship" relationship="rootViewController" id="n5p-5s-rBa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRY-8F-rxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-105" y="97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ranking-n" width="25" height="19"/>
+        <image name="ranking-p" width="25" height="19"/>
+    </resources>
+</document>

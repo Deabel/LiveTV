@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5et-Zj-8Qv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--我-->
+        <scene sceneID="lXD-ZU-cTS">
+            <objects>
+                <viewController id="5et-Zj-8Qv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lcv-80-WFn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cAM-zp-52K"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我" image="mine-n" selectedImage="mine-p" id="ZVN-ra-u9i" customClass="XWTTabbarItem" customModule="LiveTV" customModuleProvider="target"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3z2-Eo-nBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mine-n" width="25" height="19"/>
+        <image name="mine-p" width="25" height="19"/>
+    </resources>
+</document>
