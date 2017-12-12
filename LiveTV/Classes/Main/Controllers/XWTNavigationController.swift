@@ -12,8 +12,10 @@ class XWTNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.barTintColor = UIColor.black
         // Do any additional setup after loading the view.
+        navigationBar.barTintColor = .black
+        navigationBar.tintColor = UIColor.white
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
