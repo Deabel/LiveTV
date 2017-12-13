@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var searchBar: UISearchBar = UISearchBar()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,10 +29,10 @@ extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search_btn_follow"), style: .plain, target: self, action: #selector(rightButtonClick))
         
         // 搜索框
-        let searchBar = UISearchBar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 300, height: 32)))
-        searchBar.text = "主播昵称/房间号/链接"
+        searchBar = UISearchBar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 300, height: 32)))
+        searchBar.placeholder = "主播昵称/房间号/链接"
         searchBar.searchBarStyle = .minimal
-        searchBar.showsCancelButton = false
+        searchBar.isTranslucent = true
         navigationItem.titleView = searchBar
         let textField = searchBar.value(forKey: "_searchField") as! UITextField
         textField.textColor = UIColor.white
@@ -45,5 +47,9 @@ extension HomeViewController {
     
     @objc fileprivate func rightButtonClick() {
     
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        searchBar.endEditing(true)
     }
 }
