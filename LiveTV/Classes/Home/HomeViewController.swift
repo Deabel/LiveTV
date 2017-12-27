@@ -52,6 +52,7 @@ extension HomeViewController {
         controllerView?.contentSize = CGSize(width: KScreenW * CGFloat(titleArr.count), height: 0)
         controllerView?.delegate = self
         view.addSubview(controllerView!)
+        titleView?.controllerView = controllerView
         
         for i in 0..<titleArr.count {
             let vc = UIViewController()
@@ -88,6 +89,10 @@ extension HomeViewController {
 // MARK: - scrollView delegate
 extension HomeViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        titleView?.autoScrollTitleView(offset: scrollView.contentOffset.x/KScreenW)
+        titleView?.scrollViewDidScroll(offset: scrollView.contentOffset.x/KScreenW)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        titleView?.scrollViewDidEndDecelerating(offset: scrollView.contentOffset.x/KScreenW)
     }
 }
