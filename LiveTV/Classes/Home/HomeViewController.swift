@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     fileprivate var searchBar: UISearchBar = UISearchBar()
     fileprivate var titleView: ScrollViewTitleView?
+    fileprivate var controllerView: UIScrollView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,21 @@ extension HomeViewController {
         titleView = ScrollViewTitleView(frame: CGRect.init(x: 0, y: KNavgationH, width:KScreenW , height: 40),
                                             titles:titleArr)
         view.addSubview(titleView!)
+        
+        // 控制器
+        controllerView = UIScrollView(frame: CGRect(x: 0, y: (titleView?.bottom)!, width: KScreenW, height: KScreenH - (titleView?.bottom)!))
+        controllerView?.isPagingEnabled = true
+        controllerView?.showsHorizontalScrollIndicator = false
+        controllerView?.contentSize = CGSize(width: KScreenW * CGFloat(titleArr.count), height: 0)
+        controllerView?.delegate = self
+        view.addSubview(controllerView!)
+        
+        for i in 0..<titleArr.count {
+            let vc = UIViewController()
+            vc.view.frame = CGRect(x: KScreenW * CGFloat(i), y: 0, width: KScreenW, height: (controllerView?.height)!)
+            vc.view.backgroundColor = UIColor.randomColor()
+            controllerView?.addSubview(vc.view)
+        }
     }
     
     // 添加titleView导致导航栏+状态栏高度为100，此为应急处理
@@ -50,6 +66,7 @@ extension HomeViewController {
         super.viewDidAppear(animated)
         
         titleView?.top = (navigationController?.navigationBar.bottom)!
+        controllerView?.top = (titleView?.bottom)!
     }
 }
 
@@ -65,5 +82,12 @@ extension HomeViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         searchBar.endEditing(true)
+    }
+}
+
+// MARK: - scrollView delegate
+extension HomeViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        titleView?.autoScrollTitleView(offset: scrollView.contentOffset.x/KScreenW)
     }
 }
