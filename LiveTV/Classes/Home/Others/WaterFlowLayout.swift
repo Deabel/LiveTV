@@ -53,7 +53,7 @@ extension WaterFlowLayout {
             let index = columnHeights.index(of: minH!)
             minH = minH! + minimumLineSpacing + height
             columnHeights[index!] = minH!
-            
+            print(i, minH!, minH! - height - minimumLineSpacing, height)
             // 更改item属性
             attr.frame = CGRect(x: sectionInset.left + (minimumInteritemSpacing + itemWidth) * CGFloat(index!),
                                 y: minH! - height - minimumLineSpacing,
