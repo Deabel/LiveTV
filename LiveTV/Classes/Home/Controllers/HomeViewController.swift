@@ -55,10 +55,11 @@ extension HomeViewController {
         titleView?.controllerView = controllerView
         
         for i in 0..<titleArr.count {
-            let vc = UIViewController()
+            let vc = AnchorViewController()
             vc.view.frame = CGRect(x: KScreenW * CGFloat(i), y: 0, width: KScreenW, height: (controllerView?.height)!)
             vc.view.backgroundColor = UIColor.randomColor()
             controllerView?.addSubview(vc.view)
+            addChildViewController(vc)
         }
     }
     

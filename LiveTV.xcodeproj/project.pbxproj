@@ -10,6 +10,10 @@
 		6201EF271FF3760200B43171 /* ScrollViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201EF261FF3760200B43171 /* ScrollViewTitleView.swift */; };
 		6201EF2E1FF37B4500B43171 /* UIView-Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201EF2D1FF37B4500B43171 /* UIView-Frame.swift */; };
 		6201EF311FF3808200B43171 /* const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6201EF301FF3808200B43171 /* const.swift */; };
+		9961D1D4201594FB00940CEA /* WaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961D1D3201594FB00940CEA /* WaterFlowLayout.swift */; };
+		9961D1D72015C7A100940CEA /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961D1D62015C7A100940CEA /* AnchorViewController.swift */; };
+		9961D1DA2015D05900940CEA /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961D1D82015D05900940CEA /* HomeViewCell.swift */; };
+		9961D1DB2015D05900940CEA /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9961D1D92015D05900940CEA /* HomeViewCell.xib */; };
 		99A3000C1FDFBEC500056385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3000B1FDFBEC500056385 /* AppDelegate.swift */; };
 		99A3000E1FDFBEC500056385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3000D1FDFBEC500056385 /* ViewController.swift */; };
 		99A300111FDFBEC500056385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A3000F1FDFBEC500056385 /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 		6201EF261FF3760200B43171 /* ScrollViewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTitleView.swift; sourceTree = "<group>"; };
 		6201EF2D1FF37B4500B43171 /* UIView-Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Frame.swift"; sourceTree = "<group>"; };
 		6201EF301FF3808200B43171 /* const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = const.swift; sourceTree = "<group>"; };
+		9961D1D3201594FB00940CEA /* WaterFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFlowLayout.swift; sourceTree = "<group>"; };
+		9961D1D62015C7A100940CEA /* AnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
+		9961D1D82015D05900940CEA /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		9961D1D92015D05900940CEA /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		99A300081FDFBEC500056385 /* LiveTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A3000B1FDFBEC500056385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A3000D1FDFBEC500056385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				6201EF261FF3760200B43171 /* ScrollViewTitleView.swift */,
+				9961D1D82015D05900940CEA /* HomeViewCell.swift */,
+				9961D1D92015D05900940CEA /* HomeViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -71,6 +81,31 @@
 				6201EF301FF3808200B43171 /* const.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9961D1D2201594DF00940CEA /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				9961D1D3201594FB00940CEA /* WaterFlowLayout.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		9961D1D52015C77600940CEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99A300281FDFC94700056385 /* Home.storyboard */,
+				99C940541FDFE6E7001C9781 /* HomeViewController.swift */,
+				9961D1D62015C7A100940CEA /* AnchorViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9961D1DC2015D93C00940CEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		99A300091FDFBEC500056385 /* Products */ = {
@@ -111,9 +146,10 @@
 		99A3001E1FDFBEF100056385 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9961D1DC2015D93C00940CEA /* Models */,
+				9961D1D52015C77600940CEA /* Controllers */,
+				9961D1D2201594DF00940CEA /* Others */,
 				6201EF251FF375DD00B43171 /* View */,
-				99A300281FDFC94700056385 /* Home.storyboard */,
-				99C940541FDFE6E7001C9781 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -249,6 +285,7 @@
 				99A300131FDFBEC500056385 /* Assets.xcassets in Resources */,
 				99A300111FDFBEC500056385 /* Main.storyboard in Resources */,
 				99C9404B1FDFD90E001C9781 /* Mine.storyboard in Resources */,
+				9961D1DB2015D05900940CEA /* HomeViewCell.xib in Resources */,
 				99A300291FDFC94700056385 /* Home.storyboard in Resources */,
 				99A3002D1FDFC9F100056385 /* Discover.storyboard in Resources */,
 			);
@@ -261,11 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9961D1D72015C7A100940CEA /* AnchorViewController.swift in Sources */,
 				99C9404E1FDFE3C2001C9781 /* UIColor-Extension.swift in Sources */,
 				99C940531FDFE4FE001C9781 /* XWTNavigationController.swift in Sources */,
 				99A3000E1FDFBEC500056385 /* ViewController.swift in Sources */,
 				6201EF271FF3760200B43171 /* ScrollViewTitleView.swift in Sources */,
+				9961D1DA2015D05900940CEA /* HomeViewCell.swift in Sources */,
 				99C940521FDFE4FE001C9781 /* MainViewController.swift in Sources */,
+				9961D1D4201594FB00940CEA /* WaterFlowLayout.swift in Sources */,
 				99A3000C1FDFBEC500056385 /* AppDelegate.swift in Sources */,
 				6201EF311FF3808200B43171 /* const.swift in Sources */,
 				6201EF2E1FF37B4500B43171 /* UIView-Frame.swift in Sources */,

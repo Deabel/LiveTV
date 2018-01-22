@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeViewCell" customModule="LiveTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="212" height="256"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="212" height="256"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHG-Mn-Rd8">
+                        <rect key="frame" x="0.0" y="0.0" width="212" height="256"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="Zjk-Rh-ODC">
+                        <rect key="frame" x="181" y="8" width="23" height="13"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三眼女神实施休息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytw-ON-irX">
+                        <rect key="frame" x="8" y="233.5" width="98.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ4-Iv-0gi">
+                        <rect key="frame" x="111.5" y="235" width="45" height="12"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="fhU-o5-DY0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="2023" image="home_icon_people"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ytw-ON-irX" secondAttribute="bottom" constant="8" id="927-AI-ZbF"/>
+                <constraint firstItem="Zjk-Rh-ODC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Lad-Of-kxX"/>
+                <constraint firstItem="wQ4-Iv-0gi" firstAttribute="leading" secondItem="Ytw-ON-irX" secondAttribute="trailing" constant="5" id="Qj7-UC-lUc"/>
+                <constraint firstAttribute="trailing" secondItem="aHG-Mn-Rd8" secondAttribute="trailing" id="aUl-S3-A7s"/>
+                <constraint firstItem="aHG-Mn-Rd8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cLV-Nj-VBW"/>
+                <constraint firstAttribute="bottom" secondItem="aHG-Mn-Rd8" secondAttribute="bottom" id="hrc-0Q-y3O"/>
+                <constraint firstItem="Ytw-ON-irX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hvo-ga-BvX"/>
+                <constraint firstAttribute="trailing" secondItem="Zjk-Rh-ODC" secondAttribute="trailing" constant="8" id="mHb-i8-7Jj"/>
+                <constraint firstItem="aHG-Mn-Rd8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pFQ-5S-g6l"/>
+                <constraint firstItem="wQ4-Iv-0gi" firstAttribute="centerY" secondItem="Ytw-ON-irX" secondAttribute="centerY" id="z11-u7-Typ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="212" height="256"/>
+            <connections>
+                <outlet property="albumImageView" destination="aHG-Mn-Rd8" id="cNQ-1W-XyC"/>
+                <outlet property="liveImageView" destination="Zjk-Rh-ODC" id="oBM-xt-B3F"/>
+                <outlet property="nickNameLabel" destination="Ytw-ON-irX" id="CqJ-uX-iOV"/>
+                <outlet property="onlinePeopleCount" destination="wQ4-Iv-0gi" id="bpt-PC-b6e"/>
+            </connections>
+            <point key="canvasLocation" x="-511" y="-84"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_icon_live" width="23" height="13"/>
+        <image name="home_icon_people" width="7" height="7"/>
+    </resources>
+</document>

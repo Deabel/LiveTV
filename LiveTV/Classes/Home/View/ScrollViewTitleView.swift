@@ -29,7 +29,7 @@ class ScrollViewTitleView: UIView {
     
     // 与控制器联动
     open func scrollViewDidScroll(offset: CGFloat) {
-        print(offset, Int(offset))
+//        print(offset, Int(offset))
         let index = Int(offset), nextIndex = index + 1, rate = offset - CGFloat(Int(offset))
         let button = scrollView?.subviews[index] as! UIButton ,
         nextBtn = index + 1 == titleArr.count ? UIButton() : scrollView?.subviews[nextIndex] as! UIButton
