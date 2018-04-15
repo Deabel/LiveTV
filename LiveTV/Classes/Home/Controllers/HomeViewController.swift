@@ -11,8 +11,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     fileprivate var searchBar: UISearchBar = UISearchBar()
-    fileprivate var titleView: ScrollViewTitleView?
-    fileprivate var controllerView: UIScrollView?
+    fileprivate var pageView: TTPageView!
+    fileprivate var style: TTTitleStyle = TTTitleStyle()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,36 +39,24 @@ extension HomeViewController {
         let textField = searchBar.value(forKey: "_searchField") as! UITextField
         textField.textColor = UIColor.white
         
-        // 滚动标题
+        // pageView
+        let pageViewF = CGRect(x: 0, y: KNavgationH, width: KScreenW, height: KScreenH - KNavgationH)
         let titleArr = ["全部", "高颜值", "偶像派", "好声音", "好才艺", "小鲜肉", "搞笑", "劲爆", "还有更多"]
-        titleView = ScrollViewTitleView(frame: CGRect.init(x: 0, y: KNavgationH, width:KScreenW , height: 40),
-                                            titles:titleArr)
-        view.addSubview(titleView!)
-        
-        // 控制器
-        controllerView = UIScrollView(frame: CGRect(x: 0, y: (titleView?.bottom)!, width: KScreenW, height: KScreenH - (titleView?.bottom)!))
-        controllerView?.isPagingEnabled = true
-        controllerView?.showsHorizontalScrollIndicator = false
-        controllerView?.contentSize = CGSize(width: KScreenW * CGFloat(titleArr.count), height: 0)
-        controllerView?.delegate = self
-        view.addSubview(controllerView!)
-        titleView?.controllerView = controllerView
-        
-        for i in 0..<titleArr.count {
+        var childVC = [AnchorViewController]()
+        for _ in titleArr {
             let vc = AnchorViewController()
-            vc.view.frame = CGRect(x: KScreenW * CGFloat(i), y: 0, width: KScreenW, height: (controllerView?.height)!)
             vc.view.backgroundColor = UIColor.randomColor()
-            controllerView?.addSubview(vc.view)
-            addChildViewController(vc)
+            childVC.append(vc)
         }
+        pageView = TTPageView(frame: pageViewF, titles: titleArr, childVcs: childVC, parentVc: self, style: style)
+        view.addSubview(pageView)
     }
     
     // 添加titleView导致导航栏+状态栏高度为100，此为应急处理
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        titleView?.top = (navigationController?.navigationBar.bottom)!
-        controllerView?.top = (titleView?.bottom)!
+
+        pageView?.top = (navigationController?.navigationBar.bottom)!
     }
 }
 
@@ -84,16 +72,5 @@ extension HomeViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         searchBar.endEditing(true)
-    }
-}
-
-// MARK: - scrollView delegate
-extension HomeViewController : UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        titleView?.scrollViewDidScroll(offset: scrollView.contentOffset.x/KScreenW)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        titleView?.scrollViewDidEndDecelerating(offset: scrollView.contentOffset.x/KScreenW)
     }
 }

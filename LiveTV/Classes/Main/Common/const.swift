@@ -13,5 +13,6 @@ let KScreenW = UIScreen.main.bounds.width
 let KScreenH = UIScreen.main.bounds.height
 
 let KStatusBarH = UIApplication.shared.statusBarFrame.height
+let KTabBarH = (UIApplication.shared.keyWindow?.rootViewController as! UITabBarController).tabBar.height
 // 导航栏+状态栏高度
 let KNavgationH = KStatusBarH + 44.0
