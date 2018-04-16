@@ -35,16 +35,18 @@ extension HomeViewController {
         searchBar.placeholder = "主播昵称/房间号/链接"
         searchBar.searchBarStyle = .minimal
         searchBar.isTranslucent = true
-        navigationItem.titleView = searchBar
+//        navigationItem.titleView = searchBar
         let textField = searchBar.value(forKey: "_searchField") as! UITextField
         textField.textColor = UIColor.white
         
         // pageView
+        let homeTypes = loadHomeTypes()
         let pageViewF = CGRect(x: 0, y: KNavgationH, width: KScreenW, height: KScreenH - KNavgationH)
-        let titleArr = ["全部", "高颜值", "偶像派", "好声音", "好才艺", "小鲜肉", "搞笑", "劲爆", "还有更多"]
+        let titleArr = homeTypes.map({$0.title})
         var childVC = [AnchorViewController]()
-        for _ in titleArr {
+        for i in 0..<titleArr.count {
             let vc = AnchorViewController()
+            vc.homeType = homeTypes[i]
             vc.view.backgroundColor = UIColor.randomColor()
             childVC.append(vc)
         }
@@ -57,6 +59,17 @@ extension HomeViewController {
         super.viewDidAppear(animated)
 
         pageView?.top = (navigationController?.navigationBar.bottom)!
+    }
+    
+    fileprivate func loadHomeTypes() -> [HomeType] {
+        let path = Bundle.main.path(forResource: "types.plist", ofType: nil)
+        let types = NSArray(contentsOfFile: path!) as! [[String : Any]]
+        var tempArray = [HomeType]()
+        for type in types {
+            let homeType = HomeType(newTitle: type["title"] as! String, newType: type["type"] as! Int)
+            tempArray.append(homeType)
+        }
+        return tempArray
     }
 }
 

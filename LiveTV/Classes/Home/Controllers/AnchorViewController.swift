@@ -8,7 +8,7 @@
 
 import UIKit
 
-fileprivate let cellID = "CellID"
+fileprivate let cellID = "homeViewCell"
 class AnchorViewController: UIViewController {
 
     var homeType: HomeType!
@@ -26,8 +26,9 @@ class AnchorViewController: UIViewController {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
-//        collectionView.contentInset = UIEdgeInsetsMake(0, 0, KTabBarH, 0)
+        collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: cellID)
+        collectionView.contentInset = UIEdgeInsetsMake(0, 0, KTabBarH, 0)
+        collectionView.backgroundColor = UIColor.randomColor()
         return collectionView;
     }()
     
@@ -58,8 +59,7 @@ extension AnchorViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! HomeViewCell
         return cell
     }
     

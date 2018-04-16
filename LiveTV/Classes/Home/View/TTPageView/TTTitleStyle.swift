@@ -9,7 +9,7 @@
 import UIKit
 
 class TTTitleStyle {
-    let titleHeight: CGFloat = 44
+    let titleHeight: CGFloat = 40
     let fontSize: CGFloat = 16
     let normalColor: UIColor = .black
     let selectColor: UIColor = .orange
