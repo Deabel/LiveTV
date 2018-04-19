@@ -13,13 +13,14 @@ class TTFlowLayout: UICollectionViewFlowLayout {
     fileprivate let column: NSInteger = 2   // 多少列
     fileprivate lazy var attributes = [UICollectionViewLayoutAttributes]()
     fileprivate lazy var totalHeights: [CGFloat] = Array(repeating: sectionInset.top, count: column)
+    fileprivate var startIndex = 0
     
     override func prepare() {
         super.prepare()
         
         // 每个cell都有UICollectionViewLayoutAttributes
         let cellCount = collectionView?.numberOfItems(inSection: 0)
-        for i in 0..<cellCount! {
+        for i in startIndex..<cellCount! {
             let indexPath = IndexPath(item: i, section: 0)
             let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             
@@ -34,6 +35,9 @@ class TTFlowLayout: UICollectionViewFlowLayout {
             attr.frame = CGRect(x: x, y: y, width: width, height: height)
             attributes.append(attr)
             totalHeights[minHIndex] = minH + height + minimumLineSpacing
+            
+            print("i - \(i), startIndex - \(startIndex)")
+            startIndex = cellCount!
         }
     }
 }
