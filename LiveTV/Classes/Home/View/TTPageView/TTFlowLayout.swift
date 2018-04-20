@@ -24,19 +24,22 @@ class TTFlowLayout: UICollectionViewFlowLayout {
             let indexPath = IndexPath(item: i, section: 0)
             let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             
-            // cell的frame
+            // 从最小高度开始排列
             let minH: CGFloat = totalHeights.min()!
             let minHIndex = totalHeights.index(of: minH)!
+            
+            // cell的frame
             var x: CGFloat = 0, y: CGFloat = 0, width: CGFloat = 0, height: CGFloat = 0
             width = (KScreenW - sectionInset.left - sectionInset.right - (CGFloat(column) - 1) * minimumInteritemSpacing) / CGFloat(column)
-            height = CGFloat(arc4random() % 150 + 150)
+            height = CGFloat(arc4random() % 170 + 150)
             x = sectionInset.left + CGFloat(minHIndex) * (width + minimumInteritemSpacing)
-            y = i / column == 0 ? minH : minH + minimumLineSpacing
+            y = minH
             attr.frame = CGRect(x: x, y: y, width: width, height: height)
+            
+            // cell的属性
             attributes.append(attr)
             totalHeights[minHIndex] = minH + height + minimumLineSpacing
             
-            print("i - \(i), startIndex - \(startIndex)")
             startIndex = cellCount!
         }
     }
@@ -49,6 +52,6 @@ extension TTFlowLayout {
     }
     
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: 0, height: totalHeights.max()! + sectionInset.bottom)
+        return CGSize(width: 0, height: totalHeights.max()!)
     }
 }

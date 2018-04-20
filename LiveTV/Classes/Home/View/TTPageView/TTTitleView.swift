@@ -154,8 +154,6 @@ extension TTTitleView: TTContentViewDelegate {
         var offset = currentLabel.center.x - bounds.width * 0.5
         if offset < 0 { offset = 0 }
         if offset > scrollView.contentSize.width - bounds.width { offset = scrollView.contentSize.width - bounds.width }
-        UIView.animate(withDuration: 0.25) {
-            self.scrollView.setContentOffset(CGPoint(x: offset, y: 0), animated: false)
-        }
+        self.scrollView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
     }
 }
