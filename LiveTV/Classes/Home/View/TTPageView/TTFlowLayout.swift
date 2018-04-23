@@ -31,12 +31,11 @@ class TTFlowLayout: UICollectionViewFlowLayout {
             width = (KScreenW - sectionInset.left - sectionInset.right - (CGFloat(column) - 1) * minimumInteritemSpacing) / CGFloat(column)
             height = CGFloat(arc4random() % 150 + 150)
             x = sectionInset.left + CGFloat(minHIndex) * (width + minimumInteritemSpacing)
-            y = i / column == 0 ? minH : minH + minimumLineSpacing
+            y = minH
             attr.frame = CGRect(x: x, y: y, width: width, height: height)
             attributes.append(attr)
             totalHeights[minHIndex] = minH + height + minimumLineSpacing
             
-            print("i - \(i), startIndex - \(startIndex)")
             startIndex = cellCount!
         }
     }
@@ -49,6 +48,6 @@ extension TTFlowLayout {
     }
     
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: 0, height: totalHeights.max()! + sectionInset.bottom)
+        return CGSize(width: 0, height: totalHeights.min()!)
     }
 }
