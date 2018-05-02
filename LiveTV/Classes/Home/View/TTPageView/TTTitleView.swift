@@ -24,7 +24,7 @@ class TTTitleView: UIView {
         return bottomLineView
     }()
     fileprivate lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView(frame: bounds)
+        let scrollView = UIScrollView(frame: self.bounds)
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.backgroundColor = UIColor.groupTableViewBackground
         return scrollView

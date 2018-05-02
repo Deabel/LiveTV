@@ -66,7 +66,7 @@ extension HomeViewController {
         let types = NSArray(contentsOfFile: path!) as! [[String : Any]]
         var tempArray = [HomeType]()
         for type in types {
-            let homeType = HomeType(newTitle: type["title"] as! String, newType: type["type"] as! Int)
+            let homeType = HomeType.init(dict: type)
             tempArray.append(homeType)
         }
         return tempArray

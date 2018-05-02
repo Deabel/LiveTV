@@ -12,7 +12,8 @@ class TTFlowLayout: UICollectionViewFlowLayout {
 
     fileprivate let column: NSInteger = 2   // 多少列
     fileprivate lazy var attributes = [UICollectionViewLayoutAttributes]()
-    fileprivate lazy var totalHeights: [CGFloat] = Array(repeating: sectionInset.top, count: column)
+    fileprivate lazy var totalHeights: [CGFloat] = Array(repeating: self.sectionInset.top, count: self.column)
+    fileprivate var maxH : CGFloat = 0
     fileprivate var startIndex = 0
     
     override func prepare() {
@@ -35,13 +36,13 @@ class TTFlowLayout: UICollectionViewFlowLayout {
             x = sectionInset.left + CGFloat(minHIndex) * (width + minimumInteritemSpacing)
             y = minH
             attr.frame = CGRect(x: x, y: y, width: width, height: height)
+            attributes.append(attr)
             
             // cell的属性
-            attributes.append(attr)
             totalHeights[minHIndex] = minH + height + minimumLineSpacing
-            
-            startIndex = cellCount!
         }
+        maxH = totalHeights.max()!
+        startIndex = cellCount!
     }
 }
 
@@ -52,6 +53,6 @@ extension TTFlowLayout {
     }
     
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: 0, height: totalHeights.max()!)
+        return CGSize(width: 0, height: maxH)
     }
 }
