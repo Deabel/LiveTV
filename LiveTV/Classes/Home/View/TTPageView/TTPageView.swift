@@ -46,7 +46,6 @@ extension TTPageView {
     func setupTitleView() {
         let titleViewFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
         titleView = TTTitleView(frame: titleViewFrame, titles: titles, style: style)
-        titleView.backgroundColor = UIColor.blue
         addSubview(titleView)
     }
     

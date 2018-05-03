@@ -28,6 +28,8 @@ class AnchorViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: cellID)
         collectionView.backgroundColor = UIColor.randomColor()
+        collectionView.contentInset = UIEdgeInsetsMake(0, 0, KTabBarH, 0)
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         return collectionView;
     }()
     
@@ -36,16 +38,6 @@ class AnchorViewController: UIViewController {
         
         setupUI()
     }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        collectionView.frame = view.bounds
-//        layout.sectionInset = UIEdgeInsetsMake(10, 10, KTabBarH, 10)
-        collectionView.autoresizesSubviews = true
-        collectionView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
-//        collectionView.contentInset = UIEdgeInsetsMake(0, 0, KTabBarH, 0)
-    }
-
 }
 
 // MARK: - Setup UI
@@ -59,7 +51,7 @@ extension AnchorViewController {
 extension AnchorViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
