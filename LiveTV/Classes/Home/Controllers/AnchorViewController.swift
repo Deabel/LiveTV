@@ -12,6 +12,7 @@ fileprivate let cellID = "homeViewCell"
 class AnchorViewController: UIViewController {
 
     var homeType: HomeType!
+    fileprivate var homeViewModel = HomeViewModel()
     
     fileprivate lazy var layout: TTFlowLayout = {
         let layout = TTFlowLayout()
@@ -37,6 +38,8 @@ class AnchorViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        loadData(index: 0)
     }
 }
 
@@ -47,21 +50,31 @@ extension AnchorViewController {
     }
 }
 
+// MARK: - LoadData
+extension AnchorViewController {
+    func loadData(index: Int) {
+        homeViewModel.loadHomeData(type: homeType, index: index) {
+            collectionView.reloadData()
+        }
+    }
+}
+
 // MARK: - UICollectionView delegate
 extension AnchorViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return homeViewModel.anchorModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! HomeViewCell
+        let anchorModel = homeViewModel.anchorModels[indexPath.item]
+        print(anchorModel)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.white
         navigationController?.pushViewController(vc, animated: true)
     }
 }

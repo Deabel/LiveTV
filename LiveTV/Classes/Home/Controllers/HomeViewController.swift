@@ -47,7 +47,6 @@ extension HomeViewController {
         for i in 0..<titleArr.count {
             let vc = AnchorViewController()
             vc.homeType = homeTypes[i]
-            vc.view.backgroundColor = UIColor.randomColor()
             childVC.append(vc)
         }
         pageView = TTPageView(frame: pageViewF, titles: titleArr, childVcs: childVC, parentVc: self, style: style)

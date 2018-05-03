@@ -35,6 +35,8 @@
 		99C940521FDFE4FE001C9781 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C940501FDFE4FE001C9781 /* MainViewController.swift */; };
 		99C940531FDFE4FE001C9781 /* XWTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C940511FDFE4FE001C9781 /* XWTNavigationController.swift */; };
 		99C940551FDFE6E7001C9781 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C940541FDFE6E7001C9781 /* HomeViewController.swift */; };
+		99F199DD209B1AF400134208 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F199DC209B1AF400134208 /* AnchorModel.swift */; };
+		99F199DF209B1B1B00134208 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F199DE209B1B1B00134208 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		99C940501FDFE4FE001C9781 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		99C940511FDFE4FE001C9781 /* XWTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWTNavigationController.swift; sourceTree = "<group>"; };
 		99C940541FDFE6E7001C9781 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		99F199DC209B1AF400134208 /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnchorModel.swift; path = LiveTV/Classes/Tools/AnchorModel.swift; sourceTree = SOURCE_ROOT; };
+		99F199DE209B1B1B00134208 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = LiveTV/Classes/Tools/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C497D6119EE815C58E3B2AE3 /* Pods-LiveTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveTV/Pods-LiveTV.release.xcconfig"; sourceTree = "<group>"; };
 		DE632BCCE3672DE269813799 /* Pods_LiveTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,6 +146,7 @@
 		9961D1D2201594DF00940CEA /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				99F199DE209B1B1B00134208 /* HomeViewModel.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				992B32602082576F00C12BE0 /* HomeType.swift */,
+				99F199DC209B1AF400134208 /* AnchorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,6 +435,8 @@
 			files = (
 				99C9404E1FDFE3C2001C9781 /* UIColor-Extension.swift in Sources */,
 				99456725207A3C8700780C83 /* TTPageView.swift in Sources */,
+				99F199DD209B1AF400134208 /* AnchorModel.swift in Sources */,
+				99F199DF209B1B1B00134208 /* HomeViewModel.swift in Sources */,
 				994FA56E2081E30300BA698B /* TTFlowLayout.swift in Sources */,
 				99456728207A3C8700780C83 /* TTTitleView.swift in Sources */,
 				99C940531FDFE4FE001C9781 /* XWTNavigationController.swift in Sources */,
