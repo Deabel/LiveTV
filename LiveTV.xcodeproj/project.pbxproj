@@ -19,6 +19,7 @@
 		99456728207A3C8700780C83 /* TTTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99456724207A3C8700780C83 /* TTTitleView.swift */; };
 		994FA56C2081E24400BA698B /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994FA56B2081E24400BA698B /* AnchorViewController.swift */; };
 		994FA56E2081E30300BA698B /* TTFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994FA56D2081E30300BA698B /* TTFlowLayout.swift */; };
+		99562522209B0DAA00AFEFE6 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99562521209B0DAA00AFEFE6 /* NetworkTool.swift */; };
 		9961D1DA2015D05900940CEA /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961D1D82015D05900940CEA /* HomeViewCell.swift */; };
 		9961D1DB2015D05900940CEA /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9961D1D92015D05900940CEA /* HomeViewCell.xib */; };
 		99A3000C1FDFBEC500056385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3000B1FDFBEC500056385 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		99456724207A3C8700780C83 /* TTTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTitleView.swift; sourceTree = "<group>"; };
 		994FA56B2081E24400BA698B /* AnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
 		994FA56D2081E30300BA698B /* TTFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTFlowLayout.swift; sourceTree = "<group>"; };
+		99562521209B0DAA00AFEFE6 /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		9961D1D82015D05900940CEA /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		9961D1D92015D05900940CEA /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		99A300081FDFBEC500056385 /* LiveTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,14 @@
 			path = TTPageView;
 			sourceTree = "<group>";
 		};
+		9956251E209B0D6C00AFEFE6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				99562521209B0DAA00AFEFE6 /* NetworkTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		9961D1D2201594DF00940CEA /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 				99A300221FDFBEF100056385 /* Rank */,
 				99A3001F1FDFBEF100056385 /* Discover */,
 				99C940491FDFD90E001C9781 /* Profile */,
+				9956251E209B0D6C00AFEFE6 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -426,6 +437,7 @@
 				992B32612082576F00C12BE0 /* HomeType.swift in Sources */,
 				9961D1DA2015D05900940CEA /* HomeViewCell.swift in Sources */,
 				99C940521FDFE4FE001C9781 /* MainViewController.swift in Sources */,
+				99562522209B0DAA00AFEFE6 /* NetworkTool.swift in Sources */,
 				99A3000C1FDFBEC500056385 /* AppDelegate.swift in Sources */,
 				992B325D208251C000C12BE0 /* BaseModel.swift in Sources */,
 				99456726207A3C8700780C83 /* TTContentView.swift in Sources */,
