@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     fileprivate var searchBar: UISearchBar = UISearchBar()
     fileprivate var pageView: TTPageView!
-    fileprivate var style: TTTitleStyle = TTTitleStyle()
+    fileprivate var style = TTTitleStyle()
     
     override func viewDidLoad() {
         super.viewDidLoad()

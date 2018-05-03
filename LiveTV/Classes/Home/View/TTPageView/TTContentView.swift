@@ -35,6 +35,8 @@ class TTContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = UIColor.red
+//        collectionView.contentInset = UIEdgeInsetsMake(0, 0, KTabBarH, 0)
         return collectionView
     }()
     
@@ -73,9 +75,11 @@ extension TTContentView : UICollectionViewDataSource, UICollectionViewDelegate {
             subView.removeFromSuperview()
         }
         
-        let childVc = childVcs[indexPath.item]
+        let childVc = childVcs[indexPath.item] as! AnchorViewController
         childVc.view.frame = cell.contentView.bounds
+        childVc.collectionView.contentInset = (indexPath.item == 0 || indexPath.item == 1) ? UIEdgeInsets.zero : UIEdgeInsetsMake(0, 0, KTabBarH, 0)
         cell.contentView.addSubview(childVc.view)
+        
         return cell
     }
     

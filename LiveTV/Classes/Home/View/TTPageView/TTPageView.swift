@@ -55,6 +55,7 @@ extension TTPageView {
         let contentViewFrame = CGRect(x: 0, y: titleView.bounds.maxY, width: bounds.width, height: bounds.height - style.titleHeight)
         contentView = TTContentView(frame: contentViewFrame, childVcs: self.childVcs, parentVc: self.parentVc)
         contentView.backgroundColor = UIColor.orange
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         titleView.delegate = contentView
         contentView.delegate = titleView
         addSubview(contentView)
