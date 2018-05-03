@@ -19,7 +19,8 @@ class HomeViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         layer.cornerRadius = 5
-        clipsToBounds = true
+        mask?.clipsToBounds = true
+        
     }
     
 }
