@@ -28,7 +28,7 @@ class AnchorViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: cellID)
-        collectionView.backgroundColor = UIColor.randomColor()
+        collectionView.backgroundColor = UIColor.white
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, KTabBarH, 0)
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         return collectionView;
@@ -54,7 +54,7 @@ extension AnchorViewController {
 extension AnchorViewController {
     func loadData(index: Int) {
         homeViewModel.loadHomeData(type: homeType, index: index) {
-            collectionView.reloadData()
+            self.collectionView.reloadData()
         }
     }
 }
@@ -68,13 +68,18 @@ extension AnchorViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! HomeViewCell
-        let anchorModel = homeViewModel.anchorModels[indexPath.item]
-        print(anchorModel)
+        cell.anchorModel = homeViewModel.anchorModels[indexPath.item]
+        
+        if indexPath.item == homeViewModel.anchorModels.count - 1 {
+            loadData(index: homeViewModel.anchorModels.count)
+        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = UIViewController()
+        vc.view.backgroundColor = UIColor.white
         navigationController?.pushViewController(vc, animated: true)
     }
 }

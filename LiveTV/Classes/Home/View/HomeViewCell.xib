@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="212" height="256"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHG-Mn-Rd8">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHG-Mn-Rd8">
                         <rect key="frame" x="0.0" y="0.0" width="212" height="256"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <userDefinedRuntimeAttributes>
@@ -39,14 +39,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ4-Iv-0gi">
-                        <rect key="frame" x="74.5" y="235" width="45" height="12"/>
+                        <rect key="frame" x="75" y="235" width="45" height="12"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="45" id="fhU-o5-DY0"/>
+                            <constraint firstAttribute="width" constant="45" id="EQD-GZ-1Ob"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <state key="normal" title="2023" image="home_icon_people"/>
+                        <state key="normal" title="0" image="home_icon_people"/>
                     </button>
                 </subviews>
             </view>

@@ -35,7 +35,7 @@ extension HomeViewController {
         searchBar.placeholder = "主播昵称/房间号/链接"
         searchBar.searchBarStyle = .minimal
         searchBar.isTranslucent = true
-//        navigationItem.titleView = searchBar
+        navigationItem.titleView = searchBar
         let textField = searchBar.value(forKey: "_searchField") as! UITextField
         textField.textColor = UIColor.white
         

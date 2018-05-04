@@ -37,6 +37,7 @@
 		99C940551FDFE6E7001C9781 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C940541FDFE6E7001C9781 /* HomeViewController.swift */; };
 		99F199DD209B1AF400134208 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F199DC209B1AF400134208 /* AnchorModel.swift */; };
 		99F199DF209B1B1B00134208 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F199DE209B1B1B00134208 /* HomeViewModel.swift */; };
+		99F199E1209C2FA600134208 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F199E0209C2FA600134208 /* KingfisherExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		99C940541FDFE6E7001C9781 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		99F199DC209B1AF400134208 /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnchorModel.swift; path = LiveTV/Classes/Tools/AnchorModel.swift; sourceTree = SOURCE_ROOT; };
 		99F199DE209B1B1B00134208 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = LiveTV/Classes/Tools/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		99F199E0209C2FA600134208 /* KingfisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		C497D6119EE815C58E3B2AE3 /* Pods-LiveTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveTV/Pods-LiveTV.release.xcconfig"; sourceTree = "<group>"; };
 		DE632BCCE3672DE269813799 /* Pods_LiveTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				99562521209B0DAA00AFEFE6 /* NetworkTool.swift */,
+				99F199E0209C2FA600134208 /* KingfisherExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				99C940531FDFE4FE001C9781 /* XWTNavigationController.swift in Sources */,
 				99A3000E1FDFBEC500056385 /* ViewController.swift in Sources */,
 				99456727207A3C8700780C83 /* TTTitleStyle.swift in Sources */,
+				99F199E1209C2FA600134208 /* KingfisherExtension.swift in Sources */,
 				992B32612082576F00C12BE0 /* HomeType.swift in Sources */,
 				9961D1DA2015D05900940CEA /* HomeViewCell.swift in Sources */,
 				99C940521FDFE4FE001C9781 /* MainViewController.swift in Sources */,
