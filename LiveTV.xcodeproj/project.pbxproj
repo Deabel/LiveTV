@@ -22,6 +22,9 @@
 		99562522209B0DAA00AFEFE6 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99562521209B0DAA00AFEFE6 /* NetworkTool.swift */; };
 		9961D1DA2015D05900940CEA /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9961D1D82015D05900940CEA /* HomeViewCell.swift */; };
 		9961D1DB2015D05900940CEA /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9961D1D92015D05900940CEA /* HomeViewCell.xib */; };
+		999533BC209DBE6B0072E0C6 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999533BA209DBE6B0072E0C6 /* RoomViewController.swift */; };
+		999533BD209DBE6B0072E0C6 /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999533BB209DBE6B0072E0C6 /* RoomViewController.xib */; };
+		999533BF209E04D10072E0C6 /* AnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999533BE209E04D10072E0C6 /* AnimationManager.swift */; };
 		99A3000C1FDFBEC500056385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3000B1FDFBEC500056385 /* AppDelegate.swift */; };
 		99A3000E1FDFBEC500056385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3000D1FDFBEC500056385 /* ViewController.swift */; };
 		99A300111FDFBEC500056385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A3000F1FDFBEC500056385 /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		99562521209B0DAA00AFEFE6 /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		9961D1D82015D05900940CEA /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		9961D1D92015D05900940CEA /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		999533BA209DBE6B0072E0C6 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		999533BB209DBE6B0072E0C6 /* RoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
+		999533BE209E04D10072E0C6 /* AnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationManager.swift; sourceTree = "<group>"; };
 		99A300081FDFBEC500056385 /* LiveTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A3000B1FDFBEC500056385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A3000D1FDFBEC500056385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 			children = (
 				99562521209B0DAA00AFEFE6 /* NetworkTool.swift */,
 				99F199E0209C2FA600134208 /* KingfisherExtension.swift */,
+				999533BE209E04D10072E0C6 /* AnimationManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -173,6 +180,47 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		999533B5209DBE4F0072E0C6 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				999533B6209DBE4F0072E0C6 /* Controller */,
+				999533B7209DBE4F0072E0C6 /* Model */,
+				999533B8209DBE4F0072E0C6 /* View */,
+				999533B9209DBE4F0072E0C6 /* ViewModel */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		999533B6209DBE4F0072E0C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				999533BA209DBE6B0072E0C6 /* RoomViewController.swift */,
+				999533BB209DBE6B0072E0C6 /* RoomViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		999533B7209DBE4F0072E0C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		999533B8209DBE4F0072E0C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		999533B9209DBE4F0072E0C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		99A300091FDFBEC500056385 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +249,7 @@
 			children = (
 				99A300231FDFBEF100056385 /* Base */,
 				99A300211FDFBEF100056385 /* Main */,
+				999533B5209DBE4F0072E0C6 /* Live */,
 				99A3001E1FDFBEF100056385 /* Home */,
 				99A300221FDFBEF100056385 /* Rank */,
 				99A3001F1FDFBEF100056385 /* Discover */,
@@ -311,7 +360,6 @@
 				99A300051FDFBEC500056385 /* Frameworks */,
 				99A300061FDFBEC500056385 /* Resources */,
 				753B065618E80F8AB8BE1604 /* [CP] Embed Pods Frameworks */,
-				E35A0EA4438AAE3DF9F9BB47 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,6 +414,7 @@
 				99A300131FDFBEC500056385 /* Assets.xcassets in Resources */,
 				992B325F208254AD00C12BE0 /* types.plist in Resources */,
 				99A300111FDFBEC500056385 /* Main.storyboard in Resources */,
+				999533BD209DBE6B0072E0C6 /* RoomViewController.xib in Resources */,
 				99C9404B1FDFD90E001C9781 /* Mine.storyboard in Resources */,
 				9961D1DB2015D05900940CEA /* HomeViewCell.xib in Resources */,
 				99A300291FDFC94700056385 /* Home.storyboard in Resources */,
@@ -414,21 +463,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E35A0EA4438AAE3DF9F9BB47 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveTV/Pods-LiveTV-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -439,6 +473,7 @@
 				99C9404E1FDFE3C2001C9781 /* UIColor-Extension.swift in Sources */,
 				99456725207A3C8700780C83 /* TTPageView.swift in Sources */,
 				99F199DD209B1AF400134208 /* AnchorModel.swift in Sources */,
+				999533BF209E04D10072E0C6 /* AnimationManager.swift in Sources */,
 				99F199DF209B1B1B00134208 /* HomeViewModel.swift in Sources */,
 				994FA56E2081E30300BA698B /* TTFlowLayout.swift in Sources */,
 				99456728207A3C8700780C83 /* TTTitleView.swift in Sources */,
@@ -453,6 +488,7 @@
 				99A3000C1FDFBEC500056385 /* AppDelegate.swift in Sources */,
 				992B325D208251C000C12BE0 /* BaseModel.swift in Sources */,
 				99456726207A3C8700780C83 /* TTContentView.swift in Sources */,
+				999533BC209DBE6B0072E0C6 /* RoomViewController.swift in Sources */,
 				6201EF311FF3808200B43171 /* const.swift in Sources */,
 				6201EF2E1FF37B4500B43171 /* UIView-Frame.swift in Sources */,
 				99C940551FDFE6E7001C9781 /* HomeViewController.swift in Sources */,

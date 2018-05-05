@@ -78,8 +78,7 @@ extension AnchorViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.white
+        let vc = RoomViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
