@@ -33,6 +33,7 @@
 		99A300291FDFC94700056385 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A300281FDFC94700056385 /* Home.storyboard */; };
 		99A3002B1FDFC9B900056385 /* Rank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A3002A1FDFC9B900056385 /* Rank.storyboard */; };
 		99A3002D1FDFC9F100056385 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A3002C1FDFC9F100056385 /* Discover.storyboard */; };
+		99B84093209FE987001DCCF8 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B84092209FE987001DCCF8 /* RoomViewModel.swift */; };
 		99C9404B1FDFD90E001C9781 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9404A1FDFD90E001C9781 /* Mine.storyboard */; };
 		99C9404E1FDFE3C2001C9781 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9404D1FDFE3C2001C9781 /* UIColor-Extension.swift */; };
 		99C940521FDFE4FE001C9781 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C940501FDFE4FE001C9781 /* MainViewController.swift */; };
@@ -72,6 +73,8 @@
 		99A300281FDFC94700056385 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		99A3002A1FDFC9B900056385 /* Rank.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rank.storyboard; sourceTree = "<group>"; };
 		99A3002C1FDFC9F100056385 /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		99B84092209FE987001DCCF8 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoomViewModel.swift; path = LiveTV/Classes/Tools/RoomViewModel.swift; sourceTree = SOURCE_ROOT; };
+		99B840AA209FFA02001DCCF8 /* LiveTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiveTV-Bridging-Header.h"; sourceTree = "<group>"; };
 		99C9404A1FDFD90E001C9781 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		99C9404D1FDFE3C2001C9781 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		99C940501FDFE4FE001C9781 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +220,7 @@
 		999533B9209DBE4F0072E0C6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				99B84092209FE987001DCCF8 /* RoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 			children = (
 				992B325720824E3900C12BE0 /* Resource */,
 				99A3001D1FDFBEF100056385 /* Classes */,
+				99B84094209FEC89001DCCF8 /* Vendors */,
 				99A3000B1FDFBEC500056385 /* AppDelegate.swift */,
 				99A3000D1FDFBEC500056385 /* ViewController.swift */,
 				99A3000F1FDFBEC500056385 /* Main.storyboard */,
@@ -314,6 +319,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		99B84094209FEC89001DCCF8 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				99B840AA209FFA02001DCCF8 /* LiveTV-Bridging-Header.h */,
+			);
+			name = Vendors;
+			path = Classes/Vendors;
+			sourceTree = "<group>";
+		};
 		99C940491FDFD90E001C9781 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +374,7 @@
 				99A300051FDFBEC500056385 /* Frameworks */,
 				99A300061FDFBEC500056385 /* Resources */,
 				753B065618E80F8AB8BE1604 /* [CP] Embed Pods Frameworks */,
+				48F247112D3D1FAC9E3C6692 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,6 +397,7 @@
 				TargetAttributes = {
 					99A300071FDFBEC500056385 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -425,6 +441,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		48F247112D3D1FAC9E3C6692 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveTV/Pods-LiveTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		753B065618E80F8AB8BE1604 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,6 +508,7 @@
 				99F199DF209B1B1B00134208 /* HomeViewModel.swift in Sources */,
 				994FA56E2081E30300BA698B /* TTFlowLayout.swift in Sources */,
 				99456728207A3C8700780C83 /* TTTitleView.swift in Sources */,
+				99B84093209FE987001DCCF8 /* RoomViewModel.swift in Sources */,
 				99C940531FDFE4FE001C9781 /* XWTNavigationController.swift in Sources */,
 				99A3000E1FDFBEC500056385 /* ViewController.swift in Sources */,
 				99456727207A3C8700780C83 /* TTTitleStyle.swift in Sources */,
@@ -629,16 +661,23 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CD2AE2D840AFB821FAA565C /* Pods-LiveTV.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N78KXRM3CL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LiveTV/Classes/Vendors",
+					"$(PROJECT_DIR)/LiveTV/Classes/Vendors/IJKMediaFramework",
+				);
 				INFOPLIST_FILE = LiveTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Manon.LiveTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LiveTV/Classes/Vendors/LiveTV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -648,16 +687,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C497D6119EE815C58E3B2AE3 /* Pods-LiveTV.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N78KXRM3CL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LiveTV/Classes/Vendors",
+					"$(PROJECT_DIR)/LiveTV/Classes/Vendors/IJKMediaFramework",
+				);
 				INFOPLIST_FILE = LiveTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Manon.LiveTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LiveTV/Classes/Vendors/LiveTV-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -35,7 +35,7 @@ extension AnimationManager {
             cell.velocityRange = 80
             cell.scale = 0.7
             cell.velocityRange = 0.3
-            cell.birthRate = 5
+            cell.birthRate = 1
             cell.lifetime = Float(arc4random_uniform(4) + 1)
             cell.lifetimeRange = 1.5
             cell.emissionLongitude = CGFloat(-Double.pi/2)

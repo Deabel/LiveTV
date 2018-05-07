@@ -10,6 +10,8 @@ import UIKit
 
 class XWTNavigationController: UINavigationController {
 
+    var customGestureEnable = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,15 +26,18 @@ class XWTNavigationController: UINavigationController {
         let _target = (interactivePopGestureRecognizer!.value(forKey: "_targets") as! [NSObject])[0]
         let target = _target.value(forKey: "target")
         let tapGesture = UIPanGestureRecognizer(target: target!, action: Selector("handleNavigationTransition:"))
+        tapGesture.delegate = self
         view.addGestureRecognizer(tapGesture)
     }
-
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
-//    }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         viewController.hidesBottomBarWhenPushed = true
         super.pushViewController(viewController, animated: animated)
+    }
+}
+
+extension XWTNavigationController : UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return customGestureEnable && childViewControllers.count > 1
     }
 }

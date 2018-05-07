@@ -29,6 +29,7 @@ class AnchorViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: cellID)
         collectionView.backgroundColor = UIColor.white
+        collectionView.keyboardDismissMode = .onDrag
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, KTabBarH, 0)
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         return collectionView;
@@ -79,6 +80,7 @@ extension AnchorViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = RoomViewController()
+        vc.anchorModel = homeViewModel.anchorModels[indexPath.item]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
